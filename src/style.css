@@ -1,24 +1,30 @@
 body {
   background-color: #f9f7fe;
   font-family: "Courier New", Courier, monospace;
-}
+   background-image: url("./images/universe.jpg");
+   background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+
 
 h1 {
   text-align: center;
   font-weight: 800;
   font-size: 36px;
   line-height: 1.5;
-  color: #272044;
+  color: #fff;
 }
 
 p {
   text-align: center;
+  font-weight: bold;
   line-height: 1.5;
-  color: #272044;
+  color: #fff;
 }
 
 a {
-  color: navy;
+  color: #fff;
 }
 
 header {
@@ -54,7 +60,7 @@ form {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: bisque;
+  color: #fff;
   border: none;
   width: 150px;
   border-radius: 50px;
@@ -77,6 +83,6 @@ form {
 
 footer {
   text-align: center;
-  font-size: 13px;
+  font-size: 14px;
   margin-top: 30px;
 }

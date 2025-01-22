@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>AI POEM GENERATOR</title>
   </head>
@@ -14,7 +15,7 @@
       </header>
 
       <main>
-        <form>
+        <form id="cosmic-poem-generator">
           <input
             type="text"
             placeholder="Enter the topic for a cosmic poem"
@@ -25,15 +26,7 @@
           />
           <input type="submit" class="submit-button" />
         </form>
-        <div class="poem">
-          I saw no Way—The Heavens were stitched—
-          <br />
-          I felt the Columns close—
-          <br />
-          The Earth reversed her Hemispheres— I
-          <br />
-          touched the Universe—
-        </div>
+        <div class="poem" id="poem"></div>
       </main>
       <footer>
         <p>
