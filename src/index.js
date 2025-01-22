@@ -1,8 +1,4 @@
 function displayPoem(response) {
-  let poemElement = document.querySelector("#poem");
-
-  poemElement.innerHTML = "";
-
   new Typewriter(poemElement, {
     strings: [response.data.answer],
     autoStart: true,
@@ -21,9 +17,7 @@ function generatePoem(event) {
     "you are a romantic Poem expert and love to write short poems. Your mission is to generate a 4 line poem, with separate lines <br> and sign at the bottom on the right side with 'Your Cosmic AI Poet'. make sure to follow the user instructions";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
-  console.log("Generating poem");
-  console.log(`Prompt: ${prompt}`);
-  console.log(`Context: ${context}`);
+  let poemElement = document.querySelector("#poem");
 
   axios.get(apiUrl).then(displayPoem);
 }
