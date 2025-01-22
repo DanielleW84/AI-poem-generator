@@ -1,13 +1,31 @@
-function generatePoem(event) {
-  event.preventDefault();
+function displayPoem(response) {
+  let poemElement = document.querySelector("#poem");
 
-  new Typewriter("#poem", {
-    strings:
-      "I saw no Way—The Heavens were stitched, <br> I felt the Columns, <br>The Earth reversed her Hemispheres I, <br> touched the Universe...",
+  poemElement.innerHTML = "";
+
+  new Typewriter(poemElement, {
+    strings: [response.data.answer],
     autoStart: true,
     delay: 75,
     cursor: "",
   });
+}
+
+function generatePoem(event) {
+  event.preventDefault();
+
+  let instructionsInput = document.querySelector("#user-instructions");
+  let apiKey = "d5911530fao54btf00e229ba79929d73";
+  let prompt = `User instrucstions:Generate a poem only inspired by the universe, galaxy and cosmos with ${instructionsInput.value}`;
+  let context =
+    "you are a romantic Poem expert and love to write short poems. Your mission is to generate a 4 line poem, with separate lines <br> and sign at the bottom on the right side with 'Your Cosmic AI Poet'. make sure to follow the user instructions";
+  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  console.log("Generating poem");
+  console.log(`Prompt: ${prompt}`);
+  console.log(`Context: ${context}`);
+
+  axios.get(apiUrl).then(displayPoem);
 }
 
 let poemFormElement = document.querySelector("#cosmic-poem-generator");
