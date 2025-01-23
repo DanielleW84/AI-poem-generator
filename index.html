@@ -16,20 +16,24 @@
       </header>
 
       <main>
-        <form id="cosmic-poem-generator">
-          <input
-            type="text"
-            placeholder="Enter the topic for a cosmic poem"
-            autofocus
-            required
-            autocomplete="off"
-            class="instructions"
-            id="user-instructions"
-          />
-          <input type="submit" class="submit-button" />
-        </form>
+        <div class="form-container">
+          <form id="cosmic-poem-generator">
+            <input
+              type="text"
+              placeholder="Enter the topic for a generated cosmic poem"
+              autofocus
+              required
+              autocomplete="off"
+              class="instructions"
+              id="user-instructions"
+            />
+            <input type="submit" class="submit-button" />
+          </form>
+          <div class="hint">i.e Stardust, Obsidian or Jupiter</div>
+        </div>
         <div class="poem" id="poem"></div>
       </main>
+
       <footer>
         <p>
           This AI project was coded by
@@ -46,7 +50,7 @@
           and
           <a href="https://cosmicpoemgenerator.netlify.app/" target="_blank"
             >hosted on Netlify</a
-          >
+          >.
         </p>
       </footer>
     </div>
